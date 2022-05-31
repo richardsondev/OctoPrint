@@ -73,10 +73,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: 🏗 Set up test dependencies
         run: |
-          npm -g install node-qunit-phantomjs
+          npm -g install node-qunit-puppeteer
       - name: 🚀 Run helpers.js test suite
         run: |
-          node-qunit-phantomjs tests/static/js/test-helpers.html
+          node-qunit-puppeteer tests/static/js/test-helpers.html
 
   test-install:
     name: 🧪 Installation tests
