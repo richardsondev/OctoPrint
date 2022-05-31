@@ -70,11 +70,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: 🏗 Set up test dependencies
-        run: |
-          npm install -g node-qunit-puppeteer
       - name: 🚀 Run helpers.js test suite
         run: |
+          npm install node-qunit-puppeteer
           node-qunit-phantomjs tests/static/js/test-helpers.html
 
   test-install:
