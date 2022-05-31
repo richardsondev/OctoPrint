@@ -382,7 +382,7 @@ QUnit.cases(
                     port: "8000",
                     hostname: "localhost"
                 },
-                expected: "http://localhost:8000"
+                expected: "http://localhost:8001"
             }
         ];
 
