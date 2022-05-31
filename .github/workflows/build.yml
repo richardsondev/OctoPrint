@@ -67,12 +67,13 @@ jobs:
 
   test-js-unit:
     name: 🧪 JavaScript unit tests
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: 🏗 Set up test dependencies
         run: |
-          npm ci
+          npm -g install node-qunit-phantomjs
       - name: 🚀 Run helpers.js test suite
         run: |
           node-qunit-phantomjs tests/static/js/test-helpers.html
